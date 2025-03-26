@@ -3,6 +3,9 @@ A portable, statically-typed assembly language based on a virtual instruction se
 
 Purpose: Serves as a niche intermediate representation between LLVM-IR and assembly language, allowing greater control than LLVM-IR while guaranteeing security
 
+### Why types?
+The idea for creating a typed assembly language came from the namesake research paper on it - TAL (https://dl.acm.org/doi/10.1145/319301.319345). A large motivation for this project is the search for an assembly language that can be verified for correctness and safety, while also allowing low-level compiler optimizations to be applied to it. This would benefit edge applications where the safety of the program must be checked before it is ran (it must be "certified"), yet has limited memory - Mantis would provide a smaller memory footprint while still guaranteeing safety.
+
 ### Key Features
 - A core set of portable instructions available for any architecture (i.e. nop, load, store, etc.)
 - Ability to extend architecture specific capabilities at runtime or by user request
@@ -38,3 +41,7 @@ Purpose: Serves as a niche intermediate representation between LLVM-IR and assem
   - ret - return from a function
   - push r1 - Push the value of r1 onto the stack
   - pop r2 - Pop the value from the stack and place it into r2
+- Type System
+  - .int r1 - r1 holds an integer
+  - .float r2 - r2 holds a floating-point number
+  - .ptr r1 r2 - 
