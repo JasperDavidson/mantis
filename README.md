@@ -44,4 +44,5 @@ The idea for creating a typed assembly language came from the namesake research 
 - Type System
   - .int r1 - r1 holds an integer
   - .float r2 - r2 holds a floating-point number
-  - .ptr r1 r2 - 
+  - .ptr r1 r2 - r1 is a pointer to r2
+  - **Ideally far more types and complex systems like polymorphism and function pointers, this is just for a stage 1**
