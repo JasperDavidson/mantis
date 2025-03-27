@@ -45,3 +45,21 @@ The idea for creating a typed assembly language came from the namesake research 
   - .int r1 - r1 holds an integer
   - .ptr r1 r2 - r1 is a pointer to r2
   - **Ideally far more types and complex systems like polymorphism and function pointers, this is just for a stage 1**
+ 
+### Task List
+- Stage One
+  - [ ] Write a detailed design document outlining language goals, syntax, and semantics
+  - [ ] Create a register mapping table for target architectures (e.g., x86-64, ARM64, RISC-V).
+  - [ ] Implement the lexer
+  - [ ] Implement the parser
+  - [ ] Build the AST data structures
+- Stage Two
+  - [ ] Design the intermediate representation
+  - [ ] Static type checking
+  - [ ] Code generation: IR to Assembly
+  - [ ] Implement register allocation
+  - [ ] Implement low-level optimizations
+  - [ ] Extend Backend for multiple architectures
+- Stage Three
+  - [ ] Enhance the type system (macros, SIMD, higher-level language constructs that be recognized)
+  - [ ] Develop an IR optimizer
