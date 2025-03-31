@@ -50,22 +50,125 @@ The idea for creating a typed assembly language came from the namesake research 
 - *Instruction Formats*
   - \<mnemomic> \<destination>, \<source1>, \<source2> is the form that all instructions take
   - Immediate values and virtual registers are allowed (and encouraged! it is kind of a major point of the language)
-  - For example, add %r1, %r0, #10
+  - For example, add %r1, %r0, #10 would store %r0 + 10 in %r1
+- *Comments, Labels, and Annotations*
+  - Comments are specified in a C style, using "//"; inline comments are also supported
+  - Multiline comments are another goal
+```
+// Add %r0 and 10, store in %r1
+add %r1, %r0, #10 // #10 is the immediate representation of the number 10
+```
+  - Labels are specified by "label:"
+  - Labels *can* be local to a function
+```
+// Example of label usage
+label loop_start:
+  add %r0, %r0, #1
+  cmp %r0, 10
+  blt loop_start
+```
  
 ### Task List
-- Stage One
-  - [ ] Write a detailed design document outlining language goals, syntax, and semantics
-  - [ ] Create a register mapping table for target architectures (e.g., x86-64, ARM64, RISC-V).
-  - [ ] Implement the lexer
-  - [ ] Implement the parser
-  - [ ] Build the AST data structures
-- Stage Two
-  - [ ] Design the intermediate representation
-  - [ ] Static type checking
-  - [ ] Code generation: IR to Assembly
-  - [ ] Implement register allocation
-  - [ ] Implement low-level optimizations
-  - [ ] Extend Backend for multiple architectures
-- Stage Three
-  - [ ] Enhance the type system (macros, SIMD, higher-level language constructs that be recognized)
-  - [ ] Develop an IR optimizer
+<details>
+  <summary>Write a detailed design document outlining language goals, syntax, and semantics</summary>
+
+  - [ ] Detail basic syntax with instructions/labels/functions
+  - [ ] Chronicle all instruuctions, types
+  - [ ] Describe how type inference and static types will work
+</details>
+
+<details>
+  <summary>Create a register mapping table for target architectures (e.g., x86-64, ARM64, RISC-V)</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Implement the lexer</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Implement the parser</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Build the AST data structures</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Design the intermediate representation</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Static type checking</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Code generation: IR to Assembly</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Implement register allocation</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Implement low-level optimizations</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Extend Backend for multiple architectures</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Enhance the type system (macros, SIMD, higher-level language constructs that can be recognized)</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
+
+<details>
+  <summary>Develop an IR optimizer</summary>
+
+  - [ ] Option 1
+  - [ ] Option 2
+  - [ ] Option 3
+</details>
