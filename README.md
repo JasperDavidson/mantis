@@ -22,7 +22,7 @@ The idea for creating a typed assembly language came from the namesake research 
 - Other Math/Utility: abs, neg, sext (sign extension), zext (zero extension), min, max
 - Floating point & Advanced: is_finite, round, floor, ceiling, trunc, sqr, sqrt, sin, cos, tanu
 
-### Language and Syntax
+### Language and Syntax (Brief Overview)
 - Operations work from left to right
 - Register Operations
   - mov r1, 10 - moves 10 into r1
@@ -45,6 +45,12 @@ The idea for creating a typed assembly language came from the namesake research 
   - .int r1 - r1 holds an integer
   - .ptr r1 r2 - r1 is a pointer to r2
   - **Ideally far more types and complex systems like polymorphism and function pointers, this is just for a stage 1**
+
+### Language/Syntax/Semantics
+- *Instruction Formats*
+  - \<mnemomic> \<destination>, \<source1>, \<source2> is the form that all instructions take
+  - Immediate values and virtual registers are allowed (and encouraged! it is kind of a major point of the language)
+  - For example, add %r1, %r0, #10
  
 ### Task List
 - Stage One
